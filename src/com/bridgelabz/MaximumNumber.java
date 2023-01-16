@@ -5,11 +5,11 @@ public class MaximumNumber {
     public static void main(String[] args) {
         System.out.println("-----Test Maximum of 3 Variables-----");
         MaximumNumber maximumNumber = new MaximumNumber();
-        System.out.println("The maximum integer is : " + maximumNumber.checkMaximum(10, 70, 50));
+        System.out.println("The maximum float is : " + maximumNumber.checkMaximum(1.7f, 7.5f, 5.9f));
     }
 
-    int checkMaximum(Integer x, Integer y, Integer z) {
-        int max = x;
+    float checkMaximum(Float x, Float y, Float z) {
+        float max = x;
 
         if (y.compareTo(max) > 0)
             max = y;
