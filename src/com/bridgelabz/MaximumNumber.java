@@ -1,15 +1,19 @@
 package com.bridgelabz;
 
-public class MaximumNumber {
+public class MaximumNumber <E> {
 
     public static void main(String[] args) {
         System.out.println("-----Test Maximum of 3 Variables-----");
 
-        MaximumNumber maximumNumber = new MaximumNumber();
+        MaximumNumber<Integer> maximumNumber1 = new MaximumNumber<>();
+        System.out.println("The maximum Integer is : " + maximumNumber1.checkMaximum(1, 7, 5));
 
-        System.out.println("The maximum Integer is : " + maximumNumber.checkMaximum(10, 70, 50));
-        System.out.println("The maximum Float is : " + maximumNumber.checkMaximum(1.2f, 7.40f, 9.5f));
-        System.out.println("The maximum String is : " + maximumNumber.checkMaximum("Apple", "Peach", "Banana"));
+        MaximumNumber<Float> maximumNumber2 = new MaximumNumber<>();
+        System.out.println("The maximum Float is : " + maximumNumber2.checkMaximum(1.25f, 7.480f, 9.55f));
+
+        MaximumNumber<String> maximumNumber3 = new MaximumNumber<>();
+        System.out.println("The maximum String is : " + maximumNumber3.checkMaximum("Apple", "Peach", "Banana"));
+
     }
 
     <E extends Comparable<E>> E checkMaximum(E x, E y, E z) {
